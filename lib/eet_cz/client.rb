@@ -65,11 +65,11 @@ module EET_CZ
     end
 
     def ssl_cert_key_string
-      @ssl_cert_key_string ||= File.read(ssl_cert_key_file)
+      @ssl_cert_key_string ||= File.read(ssl_cert_key_file, 'rb')
     end
 
     def ssl_cert_string
-      @ssl_cert_string ||= File.read(ssl_cert_file)
+      @ssl_cert_string ||= File.read(ssl_cert_file, 'rb')
     end
 
     def set_default_cert_types
